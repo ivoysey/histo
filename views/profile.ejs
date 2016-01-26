@@ -27,9 +27,6 @@
 <script src="//d3js.org/d3.v3.min.js"></script>
 
 <div class="container">
-    <div class="page-header text-center">
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
-    </div>
     <div class="row">
 
         <!-- LOCAL INFORMATION -->
@@ -43,6 +40,7 @@
                         <strong>email</strong>: <%= user.local.email %><br>
                     </p>
 
+		    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
                     <a href="/unlink/local" class="btn btn-default">Unlink</a>
                 <% } else { %>
                     <a href="/connect/local" class="btn btn-default">Connect Local</a>
@@ -53,9 +51,13 @@
     </div>
 
     <script>
+      // code from http://bl.ocks.org/mbostock/3048450
 
       // Generate a Bates distribution of 10 random variables.
       var values = d3.range(1000).map(d3.random.bates(10));
+
+      // TODO: change the values here to a query into the mongodb, once it
+      // actually has age information
 
       // A formatter for counts.
       var formatCount = d3.format(",.0f");
