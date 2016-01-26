@@ -9,6 +9,8 @@
     </style>
 </head>
 <body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+
 <div class="container">
     <div class="page-header text-center">
         <h1><span class="fa fa-anchor"></span> Profile Page</h1>
@@ -25,7 +27,7 @@
                     <p>
                         <strong>id</strong>: <%= user._id %><br>
                         <strong>email</strong>: <%= user.local.email %><br>
-                        <strong>password</strong>: <%= user.local.password %>
+                        <!-- <strong>password</strong>: <%= user.local.password %> -->
                     </p>
 
                     <a href="/unlink/local" class="btn btn-default">Unlink</a>
