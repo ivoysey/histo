@@ -1,8 +1,0 @@
-{
-  "name": "histo",
-  "description": "A simple histogram with autheticated users",
-  "repository": "",
-  "logo": "",
-  "keywords": ["node", "express", "static"],
-  "image": "heroku/nodejs"
-}
