@@ -52,13 +52,16 @@
     </div>
 
     <script>
-      // code from http://bl.ocks.org/mbostock/3048450
+      var mongoose = require('mongoose');
+
+      // db.users.find({}, {"local.age" : 1, _id :0})
 
       // Generate a Bates distribution of 10 random variables.
-      var values = d3.range(1000).map(d3.random.bates(10));
+      // var values = d3.range(1000).map(d3.random.bates(10));
+      var values = d3.range(1000);
 
-      // TODO: change the values here to a query into the mongodb, once it
-      // actually has age information
+
+      // histogram code from http://bl.ocks.org/mbostock/3048450
 
       // A formatter for counts.
       var formatCount = d3.format(",.0f");
