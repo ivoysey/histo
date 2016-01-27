@@ -38,11 +38,7 @@
                     <p>
                         <strong>id</strong>: <%= user._id %><br>
                         <strong>email</strong>: <%= user.local.email %><br>
-			<strong>your age</strong>: <%= user.local.age
-						       %><br>
-
-			<strong><%= users.find({}, {"local.age" : 1, _id
-			:0})%><br>
+			<strong>your age</strong>: <%= user.local.age %><br>
                     </p>
 
 		    <a href="/logout" class="btn btn-default">Logout</a>
